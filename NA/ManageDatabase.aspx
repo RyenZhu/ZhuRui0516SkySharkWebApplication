@@ -21,7 +21,7 @@
             <table>
                 <tr>
                     <td colspan="3">
-                        <asp:Label ID="Label1" runat="server" Text="Manage Database"></asp:Label></td>
+                        <asp:Label ID="lblMessage" runat="server" Text="Manage Database"></asp:Label></td>
                    
                 </tr>
                 <tr>
@@ -37,7 +37,7 @@
                 </tr>
                 <tr>
                     <td colspan="3" >
-                        <asp:Button ID="btnArchive" runat="server" Text="Archive information perraining to flights that have departed" BackColor="Silver" BorderColor="Blue" Font-Names="Bookman Old Style" /></td>
+                        <asp:Button ID="btnArchive" runat="server" Text="Archive information perraining to flights that have departed" BackColor="Silver" BorderColor="Blue" Font-Names="Bookman Old Style" OnClick="btnArchive_Click1" /></td>
                
                 </tr><td></td><td></td><td></td><td></td>
                 <tr>

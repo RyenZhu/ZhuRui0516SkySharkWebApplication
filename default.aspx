@@ -6,7 +6,7 @@
     <h1>Welcome To Skysharp Airline Home Page</h1>
     <asp:Image ID="Image1" runat="server" ImageUrl="~/skyShark.png" Height="260px" Width="850px"/>
     <p>
-        Launched in 199，SskyShark Airlines is a United States-based airline that has rapidly grown in the past years.
+        Launched in 1999，SkyShark Airlines is a United States-based airline that has rapidly grown in the past years.
     </p>
     <form id="form1" runat="server">
         <div>
