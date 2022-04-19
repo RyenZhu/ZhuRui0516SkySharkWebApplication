@@ -22,40 +22,40 @@
           <div class="tabContents">
             <table>
                 <tr>
-                    <td>
+                    <td class="auto-style1">
                         <asp:Label ID="Label1" runat="server" Text="Generate Reports:"></asp:Label>
                     </td>
                     <td></td>  
                     <td></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td class="auto-style1"></td>
                     <td> <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/ChangePassword.aspx" ForeColor="#CC0000">Change Password</asp:HyperLink></td>  
                     <td>
                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Logoff.aspx" ForeColor="#CC0000">Logoff</asp:HyperLink></td>
                 </tr>
                 <tr>
-                    <td>  
+                    <td class="auto-style1">  
                         <asp:Label ID="Label2" runat="server" Text="Generate a flight usage repor tfor all flights flown by the airlinc."></asp:Label>
                     </td>
                      <td>  
-                         <asp:Button ID="Button1" runat="server" Text="Generate" BackColor="Silver" BorderColor="Blue" />
+                         <asp:Button ID="Button1" runat="server" Text="Generate Flight Usage Report" BackColor="Silver" BorderColor="Blue" OnClick="Button1_Click" />
                     </td>
                      <td>  </td>
                 </tr>
                   <tr>
-                    <td>  
+                    <td class="auto-style1">  
                         <asp:Label ID="Label3" runat="server" Text="Generate a customer affinity reportfor top 100 customers"></asp:Label>
                       </td>
                      <td>  
-                         <asp:Button ID="Button2" runat="server" Text="Generate" BackColor="Silver" BorderColor="Blue" />
+                         <asp:Button ID="Button2" runat="server" Text="Generate customer Affinity Report" BackColor="Silver" BorderColor="Blue" OnClick="Button2_Click" />
                       </td>
                      <td>  </td>
                 </tr>
                   <tr>
-                    <td>  
+                    <td class="auto-style1">  
                         <asp:Label ID="Label4" runat="server" Text="Generatec a total revenue report fromthe month"></asp:Label>
-                        <asp:ListBox ID="ListBox1" runat="server" Height="68px" Width="54px">
+                        <asp:ListBox ID="lstMonth" runat="server" Height="68px" Width="54px">
                             <asp:ListItem>1</asp:ListItem>
                             <asp:ListItem>2</asp:ListItem>
                             <asp:ListItem>3</asp:ListItem>
@@ -82,22 +82,24 @@
                         </asp:ListBox>
                       </td>
                      <td>  
-                         <asp:Button ID="Button3" runat="server" Text="Generate" BackColor="Silver" BorderColor="Blue" />
+                         <asp:Button ID="Button3" runat="server" Text="Generate Revenue Report" BackColor="Silver" BorderColor="Blue" OnClick="Button3_Click" />
                       </td>
                      <td>  </td>
                 </tr>
                 <tr>
-                    <td>  </td>
+                    <td class="auto-style1">  </td>
                      <td>  </td>
                      <td>  </td>
                 </tr>
                 <tr>
                     <td colspan="3">  
-                        <asp:GridView ID="GridView1" runat="server">
+                        <asp:GridView ID="DataGrid1" runat="server">
                         </asp:GridView>
                     </td>
                      <td>  </td>
                      <td>  </td>
                 </tr>
-                </table></div></form>
+                </table></div>
+
+     </form>
 </asp:Content>
