@@ -35,7 +35,7 @@
                 </tr>
                
                 </table>
-             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="0">
+             <asp:Wizard ID="Wizard1" runat="server" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ActiveStepIndex="1">
                  <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
                  <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
                  <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -50,6 +50,11 @@
                                      <asp:Label ID="Label2" runat="server" Text="Enquire about the status of flights"></asp:Label></td>
                                  <td></td>
                                  <td></td>
+                             </tr>
+                             <tr>
+                                 <td colspan="3">
+                                     <asp:Label ID="lblMessage" runat="server" Text="" Font-Bold="True" ForeColor="Red"></asp:Label>
+                                 </td>
                              </tr>
                              <tr>
                                  <td>
@@ -80,7 +85,7 @@
                                  <td></td>
                                  <td></td>
                                  <td>
-                                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" /></td>
+                                     <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="btnSubmit_Click" /></td>
                              </tr>
                          </table>
                      </asp:WizardStep>
@@ -100,6 +105,11 @@
                              </tr>
                              <tr>
                                  <td>
+                                     <asp:Label ID="lblTicketStatus" runat="server" Text="" Font-Bold="True" ForeColor="Red"></asp:Label>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
                                      <asp:Label ID="Label7" runat="server" Text="Ticket No"></asp:Label></td>
                                  <td>
                                      <asp:TextBox ID="txtTNo" runat="server"></asp:TextBox></td>
@@ -108,7 +118,7 @@
                              <tr>
                                  <td></td>
                                  <td>
-                                     <asp:Button ID="btnTStatSubmit" runat="server" Text="Submit" /></td>
+                                     <asp:Button ID="btnTStatSubmit" runat="server" Text="Submit" OnClick="btnTStatSubmit_Click" /></td>
                                  <td></td>
                              </tr>
                              

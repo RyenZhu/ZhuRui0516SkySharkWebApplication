@@ -25,18 +25,20 @@ namespace ZhuRui0516SkySharkWebApplication
                 String password;
                 username = txtUserName.Text;
                 password = txtPassword.Text;
-                //get conntion
+                //get conntion 
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ARPDatabaseConnectionString"].ConnectionString);
                 conn.Open();
-                //create dataadpter
-                string queryString = "Select Username,Password,Role from dtUsers where Username='" + username + "'";
+                //create dataadapter
+                string queryString = "Select UserName, Password,role from dtUsers where UserName='" + username + "'";
                 SqlDataAdapter adapter = new SqlDataAdapter();
-                //create command
+
+                //create commnad
                 adapter.SelectCommand = new SqlCommand(queryString, conn);
 
                 DataSet ds1 = new DataSet();
                 adapter.Fill(ds1, "dtUsers");
-                if (ds1.Tables["dtusers"].Rows.Count == 0)
+
+                if (ds1.Tables["dtUsers"].Rows.Count == 0)
                 {
                     lblMessage.Text = "Invalid Username";
                 }
@@ -44,6 +46,7 @@ namespace ZhuRui0516SkySharkWebApplication
                 {
                     if (ds1.Tables["dtUsers"].Rows[0][1].ToString().Trim() == txtPassword.Text.Trim())
                     {
+                        // lblMessage.Text = "Welcome," + username;
                         String Role;
                         Role = ds1.Tables["dtUsers"].Rows[0][2].ToString().Trim();
                         Session["usrName"] = username;
@@ -59,11 +62,15 @@ namespace ZhuRui0516SkySharkWebApplication
                                 Response.Redirect(".\\NA\\ManageUsers.aspx");
                                 break;
                             case "BM":
-                                Response.Redirect(".\\BM\\AddFl.aspx");
+                                Response.Redirect(".\\BM\\AddFI.aspx");
                                 break;
                             case "LOB":
                                 Response.Redirect(".\\LOB\\CreateRes.aspx");
                                 break;
+                            case "NA":
+                                Response.Redirect(".\\NA\\ManageUsers.aspx");
+                                break;
+
                         }
                     }
                     else
@@ -72,8 +79,9 @@ namespace ZhuRui0516SkySharkWebApplication
                     }
                 }
                 conn.Close();
-            }
+            }//end
         }
 
+       
     }
 }

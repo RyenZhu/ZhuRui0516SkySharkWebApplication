@@ -42,7 +42,7 @@
                 <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Font-Bold="False" Font-Names="Microsoft JhengHei UI" />
+                        <asp:Button ID="btnSubmit" runat="server" Text="Submit" Font-Bold="False" Font-Names="Microsoft JhengHei UI" OnClick="btnSubmit_Click" />
                     </td>
                     <td></td>
                 </tr>
